@@ -1,0 +1,241 @@
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+  border-radius: 120px;
+  text-shadow: 1px 8px 1px rgba(53,53,53,0.09);
+  margin: 80px 80px 0px 80px;
+    
+}
+
+h1 {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 60px;
+  letter-spacing: 4.8px;
+  word-spacing: -2.4px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  margin: 0px
+}
+
+h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+p {
+  font-family: Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.feedback-image-containers {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-right: 3%;
+}
+
+.robot-container {
+  display: flex;
+  justify-content: center;
+}
+
+.robot-image {
+  width: 40%;
+}
+
+progress[value]{
+  width: 60%;
+  height: 20px;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.question-text-css {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 4.8px;
+  word-spacing: -2.4px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  
+
+}
+
+.question-form-css {
+  width: 600px;
+  margin: 0px 25px 0px 25px;   
+}
+
+.score-card {
+  text-align: center;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 38px;
+  letter-spacing: 4.8px;
+  word-spacing: -2.4px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  margin: 45px;
+  border: solid #ccc;
+  border-width: 2px;
+}
+
+form {
+  margin: 45px;
+}
+
+hr {
+  margin: auto;
+  width: 20%;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin: 50px;
+}
+
+/* Submit Button Styling */
+
+.myButton {
+	box-shadow: 1px 3px 0px 3px #899599;
+  background:linear-gradient(to bottom, #ededed 5%, 
+   100%);
+	background-color:#ededed;
+	border-radius:10px;
+	border: 2px solid #0c8bf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#474747;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size:22px;
+	padding:9px 54px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #bab1ba38 5%, #ededed 50%);
+	background-color:#bab1ba;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* -----Radio Buttons Styling---------- */
+
+.container-css {
+  font-family: Geneva, Verdana, sans-serif;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 20px;
+  margin-left: 5%;
+}
+
+.container-css input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container-css:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container-css input:checked ~ .checkmark {
+  background-color: #0c8bf3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-css input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-css .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.bounce-animate  {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; 
+  animation-duration: 3.5s;
+}
+
+.fadeIn-animate  {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: fadeIn; 
+  animation-duration: .7s; 
+}
+
+.rotate-animate {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: pulse; 
+  animation-duration: 1s; 
+}
+
