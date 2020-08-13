@@ -253,7 +253,7 @@ hr {
 @media all and (max-width: 450px) {
   
   .question-text-css {
-    font-size: 12px;
+    font-size: 20px;
   }
 
 }
