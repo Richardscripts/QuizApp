@@ -81,6 +81,9 @@ progress[value]{
   font-variant: normal;
   text-transform: uppercase;
   margin-bottom: 45px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: red;
 }
 
 .question-form-css {
