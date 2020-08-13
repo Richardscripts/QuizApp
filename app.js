@@ -21,7 +21,9 @@ function generateQuiz() {
       <div class='robot-container'>
         <img src='images/robot.png' class='robot-image' alt='A robot looking pensively down.'>
       </div>
-      <h2 class='question-text-css'>${STORE.questions[i].question}</h2><hr>
+      <div class='question-container'>
+        <h2 class='question-text-css'>${STORE.questions[i].question}</h2><hr>
+      </div>
         <form class='quiz-form-jq'>
           <label class="container-css">${STORE.questions[i].answers[0]}
             <input type="radio" name='radio' value="${STORE.questions[i].answers[0]}" required>
