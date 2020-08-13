@@ -70,7 +70,7 @@ progress[value]{
 
 .question-text-css {
   font-family: Impact, Rubik Mono One, Charcoal, sans-serif;
-  font-size: 37px;
+  font-size: 26px;
   text-align: center;
   letter-spacing: 4.8px;
   word-spacing: -2.4px;
@@ -243,6 +243,9 @@ hr {
     .question-form-css {
       width: 600px;
   }
+  .question-text-css {
+    font-size: 40px;
+  }
 }
 
 @media all and (max-width: 650px) and (min-width: 450px) {
@@ -256,19 +259,15 @@ hr {
 @media all and (max-width: 375px) {
   
   .question-text-css {
-    font-size: 24px;
+    font-size: 34px;
   }
 
   .score-card {
-    font-size: 22px;
+    font-size: 28px;
   }
 
   header {
     margin-bottom: 90px;
-  }
-
-  .question-container {
-    width: 75%;
   }
   
 }
