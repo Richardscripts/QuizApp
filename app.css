@@ -249,15 +249,11 @@ hr {
   }
 }
 
-/* 
+
 @media all and (max-width: 450px) {
   
   .question-text-css {
-    font-size: 34px;
+    font-size: 1px;
   }
 
-  .score-card {
-    font-size: 28px;
-  }
-
-} */
+}
