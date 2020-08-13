@@ -21,30 +21,28 @@ function generateQuiz() {
       <div class='robot-container'>
         <img src='images/robot.png' class='robot-image' alt='A robot looking pensively down.'>
       </div>
-      <div class='question-container'>
-        <h2 class='question-text-css'>${STORE.questions[i].question}</h2><hr>
-      </div>
-        <form class='quiz-form-jq'>
-          <label class="container-css">${STORE.questions[i].answers[0]}
-            <input type="radio" name='radio' value="${STORE.questions[i].answers[0]}" required>
-            <span class="checkmark"></span><br>
-          </label>
-          <label class="container-css">${STORE.questions[i].answers[1]}
-            <input type="radio" name='radio' value="${STORE.questions[i].answers[1]}">
-            <span class="checkmark"></span><br>
-          </label>
-          <label class="container-css">${STORE.questions[i].answers[2]}
-            <input type="radio" name='radio' value="${STORE.questions[i].answers[2]}">
-            <span class="checkmark"></span><br>
-          </label>
-          <label class="container-css">${STORE.questions[i].answers[3]}
-            <input type="radio" name='radio' value="${STORE.questions[i].answers[3]}">
-            <span class="checkmark"></span><br>
-          </label>
-          <div class='button-wrapper'>
-            <button type='submit' id='submit' class='myButton'>Submit</button>
-          </div>
-        </form>
+      <h2 class='question-text-css'>${STORE.questions[i].question}</h2><hr>
+      <form class='quiz-form-jq'>
+        <label class="container-css">${STORE.questions[i].answers[0]}
+          <input type="radio" name='radio' value="${STORE.questions[i].answers[0]}" required>
+          <span class="checkmark"></span><br>
+        </label>
+        <label class="container-css">${STORE.questions[i].answers[1]}
+          <input type="radio" name='radio' value="${STORE.questions[i].answers[1]}">
+          <span class="checkmark"></span><br>
+        </label>
+        <label class="container-css">${STORE.questions[i].answers[2]}
+          <input type="radio" name='radio' value="${STORE.questions[i].answers[2]}">
+          <span class="checkmark"></span><br>
+        </label>
+        <label class="container-css">${STORE.questions[i].answers[3]}
+          <input type="radio" name='radio' value="${STORE.questions[i].answers[3]}">
+          <span class="checkmark"></span><br>
+        </label>
+        <div class='button-wrapper'>
+          <button type='submit' id='submit' class='myButton'>Submit</button>
+        </div>
+      </form>
       <div class='score-card'>Correct Answers: ${STORE.score}/${STORE.questions.length}</div>
       <div class='progress-bar'>
         <progress id="progress" value="${STORE.questionNumber}" max="${STORE.questions.length}"></progress>
