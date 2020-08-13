@@ -68,6 +68,10 @@ progress[value]{
   margin-bottom: 15px;
 }
 
+.question-container {
+  margin: auto;
+}
+
 .question-text-css {
   font-family: Impact, Rubik Mono One, Charcoal, sans-serif;
   font-size: 37px;
