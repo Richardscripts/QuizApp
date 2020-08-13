@@ -235,14 +235,15 @@ hr {
   animation-duration: 1s; 
 }
 
+
+/* -----Media Query---------- */
+
 @media all and (min-width: 400px) {
   
     .question-form-css {
       width: 600px;
   }
 }
-
-/* -----Media Query---------- */
 
 @media all and (max-width: 650px) and (min-width: 450px) {
   
