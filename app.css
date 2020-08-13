@@ -104,6 +104,7 @@ progress[value]{
   margin: 45px;
   border: solid #ccc;
   border-width: 2px;
+  text-align: center;
 }
 
 form {
