@@ -239,7 +239,7 @@ hr {
 
 /* -----Media Queries---------- */
 
-/* @media all and (min-width: 450px) {
+@media all and (min-width: 450px) {
   
   .question-form-css {
     width: 600px;
@@ -249,14 +249,7 @@ hr {
   }
 }
 
-@media all and (max-width: 650px) and (min-width: 450px) {
-  
-  header {
-    margin: 0px;
-    margin-bottom: 90px;
-  }
-}
-
+/* 
 @media all and (max-width: 450px) {
   
   .question-text-css {
