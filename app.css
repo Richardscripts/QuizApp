@@ -256,7 +256,7 @@ hr {
   }
 }
 
-@media all and (max-width: 375px) {
+@media all and (max-width: 450px) {
   
   .question-text-css {
     font-size: 34px;
