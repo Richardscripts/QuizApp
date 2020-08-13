@@ -252,15 +252,18 @@ hr {
   }
 }
 
-@media all and (max-width: 650px) and (min-width: 450px) {
+@media all and (max-width: 375px) {
   
   .question-text-css {
     font-size: 28px;
- 
   }
 
   .score-card {
     font-size: 26px;
-  
   }
+
+  header {
+    margin-bottom: 90px;
+  }
+  
 }
