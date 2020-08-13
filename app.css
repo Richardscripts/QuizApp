@@ -81,8 +81,6 @@ progress[value]{
   font-variant: normal;
   text-transform: uppercase;
   margin-bottom: 45px;
-  word-wrap: normal;
-  word-break: break-all;
 }
 
 .question-form-css {
@@ -106,7 +104,6 @@ progress[value]{
   margin: 45px;
   border: solid #ccc;
   border-width: 2px;
-  word-break: break-all;
 }
 
 form {
