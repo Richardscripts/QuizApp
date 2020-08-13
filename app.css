@@ -255,11 +255,11 @@ hr {
 @media all and (max-width: 375px) {
   
   .question-text-css {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .score-card {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   header {
