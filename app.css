@@ -81,9 +81,8 @@ progress[value]{
   font-variant: normal;
   text-transform: uppercase;
   margin-bottom: 45px;
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: red;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .question-form-css {
@@ -241,7 +240,7 @@ hr {
 
 /* -----Media Queries---------- */
 
-@media all and (min-width: 400px) {
+/* @media all and (min-width: 400px) {
   
     .question-form-css {
       width: 600px;
@@ -273,4 +272,4 @@ hr {
     margin-bottom: 90px;
   }
   
-}
+} */
