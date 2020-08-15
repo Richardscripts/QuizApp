@@ -45,7 +45,7 @@ function generateQuiz() {
       </form>
       <div class='info'>
         <div class='score-card '>Correct Answers:<br> ${STORE.score} out of ${STORE.questions.length}.</div>
-        <span class='percentage'><p>Question Number: ${STORE.questionNumber}/${STORE.questions.length}</p></span>
+        <span class='percentage'><p>Question Number: ${STORE.questionNumber+1}/${STORE.questions.length}</p></span>
         <div class='progress-bar'>
           <progress id="progress" data-label="50% Complete" value="${STORE.questionNumber}" max="${STORE.questions.length}"></progress>
         </div>
