@@ -43,20 +43,25 @@ function generateQuiz() {
           <button type='submit' id='submit' class='myButton'>Submit</button>
         </div>
       </form>
-      <div class='score-card'>Correct Answers: ${STORE.score}/${STORE.questions.length}</div>
-      <div class='progress-bar'>
-        <progress id="progress" value="${STORE.questionNumber}" max="${STORE.questions.length}"></progress>
+      <div class='info'>
+        <div class='score-card '>Correct Answers:<br> ${STORE.score} out of ${STORE.questions.length}.</div>
+        <span class='percentage'><p>Question Number: ${STORE.questionNumber}/${STORE.questions.length}</p></span>
+        <div class='progress-bar'>
+          <progress id="progress" data-label="50% Complete" value="${STORE.questionNumber}" max="${STORE.questions.length}"></progress>
+        </div>
       </div>
-    </div>`;
+    </div>
+    `;
 }
 
 function generateTextualFeedback(){
   return `
     <div class='question-form-css fadeIn-animate'>
       <div class='feedback-image-containers'>
-        ${STORE.questions[STORE.questionNumber].feedbackImage}
+        ${STORE.questions[STORE.questionNumber].feedbackImage}<br>
       </div>
-    <h2 class='question-text-css'>The answer: ${STORE.questions[STORE.questionNumber].correctAnswer}</h2><hr>
+    <h2 class='question-text-css'><p>${STORE.answeredCorrectly}<br><br>
+    You said ${STORE.currentAnswer}</P><br>The answer: ${STORE.questions[STORE.questionNumber].correctAnswer}</h2><hr>
     <p>${STORE.questions[STORE.questionNumber].feedbackText}</p>
       <form class='feedback-form-jq'>
         <div class='button-wrapper'>
@@ -72,7 +77,7 @@ function generateFinalScreen(){
       <div class='feedback-image-containers'>
         <img src='images/thumbs-up.png' class='rotate-animate' alt='A thumb ready for hitchhiking'>
       </div>
-    <h2 class='question-text-css'>You've reached the end!</h2><center><p>Not too shabby! You've got ${STORE.score/STORE.questions.length*100}% right.<br> You're ready to hitchhike across the galaxy! Or click below if you have the tolerance to try this quiz another time!</p></center><br><hr>
+    <h2 class='question-text-css'>You've reached the end!</h2><center><p>Not too shabby!<br> You've got ${STORE.score/STORE.questions.length*100}% right.<br> That's ${STORE.score} out of ${STORE.questions.length} questions.<br> You're ready to hitchhike across the galaxy! Or click below if you have the tolerance to try this quiz another time!</p></center><br><hr>
       <form class='restart-form-jq'>
         <div class='button-wrapper'>
           <button type='submit' id='restart' class='myButton'>Try again?</button>
@@ -99,25 +104,28 @@ function renderFinalScreen(){
   $('main').html(generateFinalScreen());
 }
 
-/********** EVENT HANDLER FUNCTIONS **********/
+/********** EVENT HANDLER **********/
 
-$('main').on('submit','.quiz-form-jq', submitAnswer);
+function SubmitHandlers(){
+  $('main').on('submit','.quiz-form-jq', submitAnswer);
+  $('main').on('submit','.welcome-form-jq', submitReady);
+  $('main').on('submit','.feedback-form-jq', submitNext);
+  $('main').on('submit','.restart-form-jq', submitRestart);
+}
 
-$('main').on('submit','.welcome-form-jq', submitReady);
-
-$('main').on('submit','.feedback-form-jq', submitNext);
-
-$('main').on('submit','.restart-form-jq', submitRestart);
-
-// These functions handle events (submit, click, etc)
+// Submit Buttons //
 
 function submitAnswer(){
   event.preventDefault();
-  let answer = $('input[name=radio]:checked').val();
-  if (STORE.questions[STORE.questionNumber].correctAnswer === answer) {
+  let theirAnswer = $('input[name=radio]:checked').val();
+  if (STORE.questions[STORE.questionNumber].correctAnswer === theirAnswer) {
     STORE.score++;
+    STORE.answeredCorrectly = "<span class='correct'>Correct!</span>";
+    STORE.currentAnswer = theirAnswer;
     renderFeedback();
   } else {
+    STORE.answeredCorrectly = "<span class='wrong'>Wrong!</span>";
+    STORE.currentAnswer = theirAnswer;
     renderFeedback();
   }
 }
@@ -148,6 +156,7 @@ function submitRestart(){
 
 function main(){
   renderForm();
+  SubmitHandlers();
 }
 
 $(main);
