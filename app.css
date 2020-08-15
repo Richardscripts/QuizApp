@@ -65,7 +65,12 @@ progress[value]{
 .progress-bar {
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.percentage {
+  display: flex;
+  justify-content: center;
 }
 
 .question-text-css {
@@ -89,6 +94,11 @@ progress[value]{
   margin: 0px 25px 0px 25px;
 }
 
+.info {
+  border: solid #ccc 2px;
+  margin: 0px 40px 20px 40px;
+}
+
 .score-card {
   display: flex;
   justify-content: center;
@@ -102,9 +112,7 @@ progress[value]{
   font-style: normal;
   font-variant: normal;
   text-transform: uppercase;
-  margin: 45px;
-  border: solid #ccc;
-  border-width: 2px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -121,6 +129,20 @@ hr {
   display: flex;
   justify-content: center;
   margin: 50px;
+}
+
+.correct {
+  font-family: Impact, Rubik Mono One, Charcoal, sans-serif;
+  font-size: 32px;
+  color: rgb(81, 231, 81);
+  
+}
+
+.wrong {
+  font-family: Impact, Rubik Mono One, Charcoal, sans-serif;
+  font-size: 32px;
+  color: rgb(231, 81, 81);
+  
 }
 
 /* Submit Button Styling */
@@ -237,6 +259,7 @@ hr {
   animation-duration: 1s; 
 }
 
+
 /* -----Media Queries---------- */
 
 @media all and (min-width: 450px) {
@@ -250,10 +273,14 @@ hr {
 }
 
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 478px) {
   
   .question-text-css {
     font-size: 20px;
+  }
+
+  .score-card {
+    font-size: 22px;
   }
 
 }
