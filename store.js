@@ -1,5 +1,3 @@
-'use strict';
-
 const STORE = { 
   questions: [{
     question: 'What is the meaning of life?',
@@ -72,5 +70,6 @@ const STORE = {
   quizStarted: false,
   questionNumber: 0,
   score: 0,
+  currentAnswer: '',
+  answersCorrectly: '',
 };
-
