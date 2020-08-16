@@ -12,7 +12,7 @@ header {
   justify-content: center;
   border-radius: 120px;
   text-shadow: 1px 8px 1px rgba(53,53,53,0.09);
-  margin: 50px 20px 0px 20px; 
+  margin: 40px 20px 0px 20px; 
 }
 
 h1 {
@@ -294,7 +294,7 @@ hr {
   }
 
   h1 {
-    font-size: 60px;
+    font-size: 58px;
   }
 
   .container-css {
