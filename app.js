@@ -4,6 +4,7 @@
 
 function generateWelcomeMsg(){
   return `
+  <div class='welcome-message'>
     <div class='question-form-css'>
     <h2 class='question-text-css'>Welcome to the most vastly, hugely, mind-bogglingly big Quiz on the internet today!</h2><center><p>Warning:<br> The invention of this App has made a lot of people very angry and been widely regarded as a bad move.</p></center><br><hr>
       <form class='welcome-form-jq'>
@@ -11,7 +12,8 @@ function generateWelcomeMsg(){
           <button tabindex="0" type='submit' id='ready' class='myButton'>Ready</button>
         </div>
       </form>
-    </div>`;
+    </div>
+  </div>`;
 }
 
 function generateQuiz() {
@@ -45,9 +47,9 @@ function generateQuiz() {
       </form>
       <div class='info'>
         <div class='score-card '>Correct Answers:<br> ${STORE.score} out of ${STORE.questions.length}.</div>
-        <span class='percentage'><p>Question Number: ${STORE.questionNumber+1}/${STORE.questions.length}</p></span>
+        <span class='percentage'><p>Question Number: ${STORE.questionNumber + 1}/${STORE.questions.length}</p></span>
         <div class='progress-bar'>
-          <progress id="progress" data-label="50% Complete" value="${STORE.questionNumber+1}" max="${STORE.questions.length}"></progress>
+          <progress id="progress" data-label="50% Complete" value="${STORE.questionNumber + 1}" max="${STORE.questions.length}"></progress>
         </div>
       </div>
     </div>
@@ -60,7 +62,7 @@ function generateTextualFeedback(){
       <div class='feedback-image-containers'>
         ${STORE.questions[STORE.questionNumber].feedbackImage}<br>
       </div>
-    <h2 class='question-text-css'><p>${STORE.answeredCorrectly}<br><br>
+    <h2 class='question-text-css'><p>${STORE.ifAnswersCorrectOrNot}<br><br>
     You said ${STORE.currentAnswer}</P><br>The answer: ${STORE.questions[STORE.questionNumber].correctAnswer}</h2><hr>
     <p>${STORE.questions[STORE.questionNumber].feedbackText}</p>
       <form class='feedback-form-jq'>
@@ -118,16 +120,14 @@ function SubmitHandlers(){
 function submitAnswer(){
   event.preventDefault();
   let theirAnswer = $('input[name=radio]:checked').val();
+  STORE.currentAnswer = theirAnswer;
   if (STORE.questions[STORE.questionNumber].correctAnswer === theirAnswer) {
     STORE.score++;
-    STORE.answeredCorrectly = "<span class='correct'>Correct!</span>";
-    STORE.currentAnswer = theirAnswer;
-    renderFeedback();
+    STORE.ifAnswersCorrectOrNot = "<span class='correct'>Correct!</span>";
   } else {
-    STORE.answeredCorrectly = "<span class='wrong'>Wrong!</span>";
-    STORE.currentAnswer = theirAnswer;
-    renderFeedback();
+    STORE.ifAnswersCorrectOrNot = "<span class='wrong shake-animate'>Wrong!</span>";
   }
+  renderFeedback();
 }
 
 function submitReady(){
