@@ -71,5 +71,5 @@ const STORE = {
   questionNumber: 0,
   score: 0,
   currentAnswer: '',
-  answersCorrectly: '',
+  ifAnswersCorrectOrNot: '',
 };
