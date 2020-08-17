@@ -300,11 +300,3 @@ hr {
     font-size: 22px;
   }
 }
-
-@media all and (min-width: 1200px) and (orientation: landscape)  {
-
-  .question-form-css {
-    width: 700px;
-  }
- 
-}
