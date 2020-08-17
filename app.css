@@ -302,7 +302,7 @@ hr {
   }
 }
 
-@media all and (min-width: 1580px) and  (min-height: 1000px)  {
+@media all and (min-width: 1200px) and (orientation: landscape)  {
 
   .question-form-css {
     width: 700px;
